@@ -1,0 +1,11 @@
+{
+  "rulesDirectory": [
+    "node_modules/tslint-eslint-rules/dist/rules",
+    "node_modules/vrsource-tslint-rules/rules"
+  ],
+  "extends": "cs-tslint-rules/tslint-base.json",
+  "rules": {
+    "jsdoc-format": false,
+    "no-floating-promises": false
+  }
+}

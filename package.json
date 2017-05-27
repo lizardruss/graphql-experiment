@@ -1,0 +1,35 @@
+{
+  "name": "graphql-experiment",
+  "version": "1.0.0",
+  "description": "Playing with GraphQL",
+  "main": "dist/index.js",
+  "repository": "git@github.com:lizardruss/graphql-experiment.git",
+  "author": "Russell Centanni <russell.centanni@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 6.0",
+    "npm": ">= 3.0"
+  },
+  "scripts": {
+    "changelog": "`npm bin`/conventional-changelog -p angular -i CHANGELOG.md -s",
+    "commitmsg": "`npm bin`/validate-commit-msg",
+    "pretag": "git checkout master; git pull origin master",
+    "tag": "`npm bin`/standard-version",
+    "prerelease": "git push --follow-tags origin master",
+    "release": "`npm bin`/conventional-github-releaser -p angular",
+    "client-docs": "`npm bin`/typedoc --out ./docs/client --name 'graphql-experiment client' --theme minimal --readme ./client/README.md --excludeExternals --excludePrivate --tsconfig ./client/tsconfig.json  --target es6 ./client/src/",
+    "server-docs": "`npm bin`/typedoc --out ./docs/server --name 'graphql-experiment server' --theme minimal --readme ./server/README.md --excludeExternals --excludePrivate --tsconfig ./server/tsconfig.json  --target es6 ./server/src/",
+    "docs": "npm run client-docs && npm run server-docs"
+  },
+  "devDependencies": {
+    "conventional-changelog-cli": "^1.3.1",
+    "conventional-github-releaser": "^1.1.3",
+    "husky": "^0.13.3",
+    "standard-version": "^4.0.0",
+    "typedoc": "^0.7.1",
+    "validate-commit-msg": "^2.12.1"
+  },
+  "dependencies": {
+    "@angular/cli": "^1.0.6"
+  }
+}
