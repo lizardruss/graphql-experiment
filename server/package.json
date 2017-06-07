@@ -7,14 +7,12 @@
   "author": "Russell Centanni <russell-centanni@pluralsight.com>",
   "license": "MIT",
   "scripts": {
-    "lint": "npm run format && `npm bin`/tslint --type-check --fix --format codeFrame -p tsconfig.json -c tslint.json 'src/**/*.ts'",
-    "format": "`npm bin`/clang-format -style=file -i --glob=src/**/*.ts",
+    "lint": "`npm bin`/tslint --type-check --fix --format codeFrame -p tsconfig.json -c tslint.json 'src/**/*.ts'",
     "dev": "`npm bin`/nodemon --watch 'src/**/*.ts' --exec '`npm bin`/ts-node' src/index.ts"
   },
   "devDependencies": {
     "@types/koa": "^2.0.39",
     "@types/node": "^7.0.22",
-    "clang-format": "^1.0.52",
     "cs-tslint-rules": "^5.2.0",
     "nodemon": "^1.11.0",
     "ts-node": "^3.0.4",
