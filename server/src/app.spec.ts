@@ -9,7 +9,7 @@ describe(`GraphQL API`, () => {
   let sandbox;
 
   before(() => {
-    server = app.listen(3001);
+    server = app.listen();
     sandbox = sinon.sandbox.create();
   });
 
