@@ -3,6 +3,11 @@
   "compilerOptions": {
     "outDir": "dist",
     "baseUrl": "src",
+    "paths": {
+      "*": [
+        "src/*"
+      ]
+    },
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",

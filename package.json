@@ -7,7 +7,7 @@
   "author": "Russell Centanni <russell.centanni@gmail.com>",
   "license": "MIT",
   "engines": {
-    "node": ">= 6.0",
+    "node": ">= 7.6",
     "npm": ">= 3.0"
   },
   "scripts": {
@@ -30,6 +30,7 @@
     "validate-commit-msg": "^2.12.1"
   },
   "dependencies": {
-    "@angular/cli": "^1.0.6"
+    "@angular/cli": "^1.0.6",
+    "@types/graphql": "^0.9.1"
   }
 }

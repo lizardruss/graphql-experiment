@@ -1,0 +1,8 @@
+--compilers ts-node/register
+--watch-extensions ts
+--require source-map-support/register
+--require ./test/sinon-chai
+--recursive
+--reporter spec
+
+src/**/*.spec.ts

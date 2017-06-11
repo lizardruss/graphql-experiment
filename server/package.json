@@ -8,19 +8,60 @@
   "license": "MIT",
   "scripts": {
     "lint": "`npm bin`/tslint --type-check --fix --format codeFrame -p tsconfig.json -c tslint.json 'src/**/*.ts'",
-    "dev": "`npm bin`/nodemon --watch 'src/**/*.ts' --exec '`npm bin`/ts-node' src/index.ts"
+    "dev": "`npm bin`/nodemon --watch 'src/**/*.ts' --exec '`npm bin`/ts-node' src/main.ts",
+    "test": "nyc mocha"
   },
   "devDependencies": {
     "@types/koa": "^2.0.39",
+    "@types/mocha": "^2.2.41",
     "@types/node": "^7.0.22",
+    "@types/sinon": "^2.3.1",
+    "@types/sinon-chai": "^2.7.28",
+    "@types/supertest": "^2.0.0",
+    "chai": "^4.0.2",
     "cs-tslint-rules": "^5.2.0",
+    "mocha": "^3.4.2",
     "nodemon": "^1.11.0",
+    "nyc": "^11.0.2",
+    "sinon": "^2.3.4",
+    "sinon-chai": "^2.10.0",
+    "source-map-support": "^0.4.15",
+    "supertest": "^3.0.0",
     "ts-node": "^3.0.4",
     "tslint": "^5.3.2",
     "typescript": "^2.3.3",
     "vrsource-tslint-rules": "^5.1.0"
   },
   "dependencies": {
-    "koa": "^2.2.0"
+    "graphql": "^0.10.1",
+    "graphql-decorator": "^0.2.0",
+    "graphql-server-koa": "^0.8.0",
+    "graphql-tools": "^1.0.0",
+    "koa": "^2.2.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.2.0",
+    "lodash.merge": "^4.6.0"
+  },
+  "nyc": {
+    "all": true,
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "exclude": [
+      "**/*.d.ts",
+      "**/*.spec.ts",
+      "*.js",
+      "src/main.ts",
+      "coverage/**",
+      "node_modules/**",
+      "test/**"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "html"
+    ]
   }
 }
